@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Shopper</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <link href="stylesheets/style.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="javascripts/java.js"></script>
+    </head>
+    <body ng-app="purchases" ng-controller="MainCtrl">
+        <div>
+            <h1>Shopping Interface</h1>
+            
+            <h1>Current Products</h1>
+            <div ng-repeat="item in items | orderBy: 'Name'">
+                <input type="checkbox" ng-model="item.selected"> {{item.Name}} - price {{item.Price}} <img class="itemPicture" src="{{item.URL}}"/>
+            </div>
+            <button ng-click="purchase()">Submit Purchase</button>
+            
+            <h1>Shopping Cart</h1>
+            <div ng-repeat="item in list | orderBy: 'Name'">
+                {{item.Name}} - {{item.Price}} - <img class="itemPicture" src="{{item.URL}}"/>
+            </div>
+        </div>
+    </body>
+</html>
