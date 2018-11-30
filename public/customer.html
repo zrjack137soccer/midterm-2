@@ -7,18 +7,18 @@
         <script src="javascripts/java.js"></script>
     </head>
     <body ng-app="purchases" ng-controller="MainCtrl">
-        <div>
-            <h1>Shopping Interface</h1>
+        <div class="webBody">
+            <h1 class="titleStyle main">Shopping Interface</h1>
             
-            <h1>Current Products</h1>
+            <h1 class="titleStyle">Current Products</h1>
             <div ng-repeat="item in items | orderBy: 'Name'">
                 <input type="checkbox" ng-model="item.selected"> {{item.Name}} - price {{item.Price}} <img class="itemPicture" src="{{item.URL}}"/>
             </div>
             <button ng-click="purchase()">Submit Purchase</button>
             
-            <h1>Shopping Cart</h1>
+            <h1 class="titleStyle">Shopping Cart</h1>
             <div ng-repeat="item in list | orderBy: 'Name'">
-                {{item.Name}} - {{item.Price}} - <img class="itemPicture" src="{{item.URL}}"/>
+                {{item.Name}} - {{item.Price}} <img class="itemPicture" src="{{item.URL}}"/>
             </div>
         </div>
     </body>

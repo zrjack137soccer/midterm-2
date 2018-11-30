@@ -8,8 +8,8 @@
     </head>
     
     <body ng-app="purchases" ng-controller="MainCtrl">
-        <div>
-            <h1>Store Management Interface</h1>
+        <div class="webBody">
+            <h1 class="titleStyle main">Store Management Interface</h1>
             <form ng-submit="addItem()">
                 Product Name: <input type="text" ng-model="form_Name"></input><br>
                 Price: <input type="text" ng-model="formPrice"></input><br>
@@ -17,7 +17,7 @@
                 <button type="submit">Add Product</button>
             </form>
             
-            <h1>Current Products</h1>
+            <h1 class="titleStyle">Current Products</h1>
             <div ng-repeat="item in items | orderBy:'Name'">
                 <span class ="glyphicon glyphicon-remove" ng-click="delete(item)"><button style=</span>
                 {{item.Name}} - price {{item.Price}} - ordered {{item.orders}} <img class="itemPicture" src="{{item.URL}}"/>

@@ -1,4 +1,5 @@
 body {
+  background-image: url("../images/dark_blue_background.png");
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -10,4 +11,22 @@ a {
 .itemPicture {
   width: 150px;
   height: 100px;
+}
+
+.webBody {
+  background-color: #FFFFC8;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.titleStyle {
+  color: #FA7878;
+  text-shadow: 2px 2px red;
+}
+
+.main {
+  background-color: aqua;
+  padding-left: 2px;
+  border-radius: 25px;
+  margin-right: 60%;
 }
